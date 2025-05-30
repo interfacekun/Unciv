@@ -78,39 +78,39 @@ project(":desktop") {
 }
 
 // For server-side
-project(":server") {
-    apply(plugin = "kotlin")
+// project(":server") {
+//     apply(plugin = "kotlin")
 
-    dependencies {
-        // For server-side
-        "implementation"("io.ktor:ktor-server-core:1.6.8")
-        "implementation"("io.ktor:ktor-server-netty:1.6.8")
-        "implementation"("ch.qos.logback:logback-classic:1.2.5")
-        "implementation"("com.github.ajalt.clikt:clikt:3.4.0")
-    }
+//     dependencies {
+//         // For server-side
+//         "implementation"("io.ktor:ktor-server-core:1.6.8")
+//         "implementation"("io.ktor:ktor-server-netty:1.6.8")
+//         "implementation"("ch.qos.logback:logback-classic:1.2.5")
+//         "implementation"("com.github.ajalt.clikt:clikt:3.4.0")
+//     }
 
-}
+// }
 
-if (System.getenv("ANDROID_HOME") != null) {
-    project(":android") {
-        apply(plugin = "com.android.application")
-        apply(plugin = "kotlin-android")
+// if (System.getenv("ANDROID_HOME") != null) {
+//     project(":android") {
+//         apply(plugin = "com.android.application")
+//         apply(plugin = "kotlin-android")
 
-        val natives by configurations.creating
+//         val natives by configurations.creating
 
-        dependencies {
-            "implementation"(project(":core"))
-            // Not sure why I had to add this in for the upgrade to 1.12.1 to work, we can probably remove this later since it's contained in core
-            "implementation"("com.badlogicgames.gdx:gdx:$gdxVersion")
-            "implementation"("com.badlogicgames.gdx:gdx-backend-android:$gdxVersion")
-            "implementation"("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
-            natives("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a")
-            natives("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a")
-            natives("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86")
-            natives("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64")
-        }
-    }
-}
+//         dependencies {
+//             "implementation"(project(":core"))
+//             // Not sure why I had to add this in for the upgrade to 1.12.1 to work, we can probably remove this later since it's contained in core
+//             "implementation"("com.badlogicgames.gdx:gdx:$gdxVersion")
+//             "implementation"("com.badlogicgames.gdx:gdx-backend-android:$gdxVersion")
+//             "implementation"("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
+//             natives("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a")
+//             natives("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a")
+//             natives("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86")
+//             natives("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64")
+//         }
+//     }
+// }
 
 
 project(":core") {
@@ -135,22 +135,22 @@ project(":core") {
 
 
     // Taken from https://github.com/TomGrill/gdx-testing
-    project(":tests") {
-        apply(plugin = "java")
-        apply(plugin = "kotlin")
+    // project(":tests") {
+    //     apply(plugin = "java")
+    //     apply(plugin = "kotlin")
 
-        dependencies {
-            "implementation"(project(":core"))
+    //     dependencies {
+    //         "implementation"(project(":core"))
 
-            "implementation"("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
+    //         "implementation"("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
 
-            "implementation"("junit:junit:4.13.2")
-            "implementation"("org.mockito:mockito-core:5.13.0")
+    //         "implementation"("junit:junit:4.13.2")
+    //         "implementation"("org.mockito:mockito-core:5.13.0")
 
-            "implementation"("com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion")
-            "implementation"("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop")
-            "implementation"("com.badlogicgames.gdx:gdx-backend-headless:$gdxVersion")
-            "implementation"("com.badlogicgames.gdx:gdx:$gdxVersion")
-        }
-    }
+    //         "implementation"("com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion")
+    //         "implementation"("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop")
+    //         "implementation"("com.badlogicgames.gdx:gdx-backend-headless:$gdxVersion")
+    //         "implementation"("com.badlogicgames.gdx:gdx:$gdxVersion")
+    //     }
+    // }
 }
