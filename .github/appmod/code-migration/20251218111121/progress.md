@@ -41,6 +41,7 @@
   - `unciv_rua/src/app/models/ModConstants.lua`
   - 更多占位文件请查看 `unciv_rua/src/app/models/` 下的目录结构。
 - ✅ 本次批次已创建规则验证与 `unique` 子模块占位（示例路径：`src/app/models/ruleset/validation/`、`src/app/models/ruleset/unique/`、`src/app/models/ruleset/unique/expressions/`），并以提交保存（59 个文件变更）。
+- ✅ 已创建 nation 与 tech 子模块占位（示例路径：`src/app/models/ruleset/nation/`、`src/app/models/ruleset/tech/`、`src/app/models/ruleset/unit/`），并以提交保存（已包含于上一提交）。
 ## 版本控制
 - [✅] 检查未提交变更 — 无未提交变更
 - [✅] 当前分支 — `appmod/java-migration-20251218111121`
