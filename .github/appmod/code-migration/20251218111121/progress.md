@@ -7,6 +7,7 @@
 - [✅] 迁移计划已生成 ([plan.md](/Users/interface/git/game/Unciv/.github/appmod/code-migration/20251218111121/plan.md))
 - [⌛️] 映射到 Lua 模块 — 进行中
 - [✅] 占位 Lua 模块已创建（若干核心模型，占位文件见 `unciv_rua/src/app/models/`）
+- [✅] 在所有占位 Lua 模块顶部添加 TODO header（`-- TODO (migration): ...` & `-- MIGRATION_STATUS: placeholder`）
 - [ ] 提取并转换资源 — 未开始
 - [ ] 实现核心游戏逻辑（Lua） — 未开始
 - [ ] 移植 UI 与输入处理 — 未开始
