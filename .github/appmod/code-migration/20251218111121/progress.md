@@ -6,6 +6,7 @@
 - [✅] 分析 Kotlin 项目 (Unciv) — 已完成
 - [✅] 迁移计划已生成 ([plan.md](/Users/interface/git/game/Unciv/.github/appmod/code-migration/20251218111121/plan.md))
 - [⌛️] 映射到 Lua 模块 — 进行中
+- [⌛️] 实现核心数据类（Lua POC） — 进行中
 - [✅] 占位 Lua 模块已创建（若干核心模型，占位文件见 `unciv_rua/src/app/models/`）
 - [✅] 在所有占位 Lua 模块顶部添加 TODO header（`-- TODO (migration): ...` & `-- MIGRATION_STATUS: placeholder`）
 - [✅] 为缺失的 Kotlin 模型创建占位 Lua 模块（`expressions` 子系统，6 个文件）
@@ -42,6 +43,7 @@
   - `unciv_rua/src/app/models/Religion.lua`
   - `unciv_rua/src/app/models/ModConstants.lua`
   - 更多占位文件请查看 `unciv_rua/src/app/models/` 下的目录结构。
+- ✅ 已实现 POC 初版：`Player.lua`（增强）、`UnitType.lua`（增强）、`BaseUnit.lua`（新增）、`poc_core_poc.lua`（新增）。
 - ✅ 本次批次已创建规则验证与 `unique` 子模块占位（示例路径：`src/app/models/ruleset/validation/`、`src/app/models/ruleset/unique/`、`src/app/models/ruleset/unique/expressions/`），并以提交保存（59 个文件变更）。
 - ✅ 已创建 nation 与 tech 子模块占位（示例路径：`src/app/models/ruleset/nation/`、`src/app/models/ruleset/tech/`、`src/app/models/ruleset/unit/`），并以提交保存（已包含于上一提交）。
 - ✅ 本次新增批次已完成 tile 子模块与若干杂项模型占位（示例路径：`src/app/models/ruleset/tile/`、`src/app/models/`），并以提交保存（约 24 个文件）。
